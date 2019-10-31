@@ -1,0 +1,8 @@
+spring:
+  messages.basename: i18n/bundle 
+  h2.console.enabled: true
+  datasource.initialization-mode: always
+  jpa:
+#    generate-ddl: false
+#    hibernate.ddl-auto: none
+    show-sql: true
