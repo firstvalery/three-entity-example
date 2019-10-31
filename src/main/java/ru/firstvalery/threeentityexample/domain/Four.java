@@ -1,14 +1,9 @@
 package ru.firstvalery.threeentityexample.domain;
 
-import java.util.Set;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -19,8 +14,8 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "type")
-public class Type {
+@Table(name = "four")
+public class Four {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Getter
@@ -30,10 +25,4 @@ public class Type {
 	@Getter
 	@Setter
 	private String name;
-	
-	@ManyToMany
-	@JoinTable(name = "channel_profile", joinColumns = @JoinColumn(name = "type_id"), inverseJoinColumns = @JoinColumn(name = "four_id"))
-	@Getter
-	@Setter
-	private Set<Four> fours;
 }
